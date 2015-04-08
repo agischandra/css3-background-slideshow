@@ -1,0 +1,259 @@
+/* RESET */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt,
+var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+: focus {
+    outline: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,
+th,
+td {
+	text-align: left;
+	font-weight: normal
+}
+
+blockquote: before,
+blockquote: after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "";
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	display: block;
+}
+
+.container .title {
+	color: #fff;
+	z-index: 9;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.container .title h2 {
+	margin: 15% auto;
+	width: 55%;
+	padding: 15px 0px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 52px;
+	background: rgba(0,0,0,0.5);
+	font-weight: bold;
+}
+
+.container .title p {
+	text-align: center;
+	font-size: 26px;
+}
+
+/* Background Image */
+
+.bgImg {
+	height: 100%;
+	width: 100%;
+	background-color: #191919;
+	position: absolute;
+	top: 0px;
+}
+
+/* Background Image Slide */
+
+.slideshow li span { 
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: transparent;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: none;
+	opacity: 0;
+	z-index: 0;
+	-webkit-backface-visibility: hidden;
+	-webkit-animation: bgAnimate 36s linear infinite 0s;
+	-moz-animation: bgAnimate 36s linear infinite 0s;
+	-o-animation: bgAnimate 36s linear infinite 0s;
+	-ms-animation: bgAnimate 36s linear infinite 0s;
+	animation: bgAnimate 36s linear infinite 0s; 
+}
+
+.slideshow li div { 
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+}
+
+.slideshow li:nth-child(1) span {
+    background-image: url("../images/slide1.jpg");
+}
+
+.slideshow li:nth-child(2) span {
+	background-image: url("../images/slide2.jpg");
+	-webkit-animation-delay: 6s;
+	-moz-animation-delay: 6s;
+	-o-animation-delay: 6s;
+	-ms-animation-delay: 6s;
+	animation-delay: 6s; 
+}
+
+.slideshow li:nth-child(3) span {
+	background-image: url("../images/slide3.jpg");
+	-webkit-animation-delay: 9s;
+	-moz-animation-delay: 9s;
+	-o-animation-delay: 9s;
+	-ms-animation-delay: 9s;
+	animation-delay: 9s; 
+}
+
+/* Animation for the slideshow images */
+
+@-webkit-keyframes bgAnimate {
+	0% {
+		opacity: 0;
+		-webkit-animation-timing-function: ease-in;
+	}
+    8% {
+		opacity: 1;
+		-webkit-animation-timing-function: ease-out;
+	}
+    17% {
+		opacity: 1;
+	}
+    25% {
+		opacity: 0;
+	}
+    100% {
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes bgAnimate {
+	0% {
+		opacity: 0;
+		-moz-animation-timing-function: ease-in;
+	}
+    8% {
+		opacity: 1;
+		-moz-animation-timing-function: ease-out;
+	}
+    17% {
+		opacity: 1;
+	}
+    25% {
+		opacity: 0;
+	}
+    100% {
+		opacity: 0;
+	}
+}
+
+@-o-keyframes bgAnimate {
+	0% {
+		opacity: 0;
+		-o-animation-timing-function: ease-in;
+	}
+    8% {
+		opacity: 1;
+		-o-animation-timing-function: ease-out;
+	}
+    17% {
+		opacity: 1;
+	}
+    25% {
+		opacity: 0;
+	}
+    100% {
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes bgAnimate {
+	0% {
+		opacity: 0;
+		-ms-animation-timing-function: ease-in;
+	}
+    8% {
+		opacity: 1;
+		-ms-animation-timing-function: ease-out;
+	}
+    17% {
+		opacity: 1;
+	}
+    25% {
+		opacity: 0;
+	}
+    100% {
+		opacity: 0;
+	}
+}
+
+@keyframes bgAnimate {
+	0% { opacity: 0;
+		animation-timing-function: ease-in;
+	}
+    8% {
+		opacity: 1;
+		animation-timing-function: ease-out;
+	}
+    17% {
+		opacity: 1;
+	}
+    25% {
+		opacity: 0;
+	}
+    100% {
+		opacity: 0;
+	}
+}
+
+/* Show at least something when animations not supported */
+
+.no-cssanimations .slideshow li span {
+	opacity: 1;
+}
